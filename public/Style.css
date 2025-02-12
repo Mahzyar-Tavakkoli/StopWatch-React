@@ -3,3 +3,55 @@
     margin: 0;
     box-sizing: border-box;
 }
+
+#root {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+}
+h1 , p ,h3 {
+    text-align: center;
+}
+.App{
+    margin-top: 50px;
+}
+h1{
+    font-size: 50px;
+    color: rgb(28, 121, 90);
+}
+.Timer{
+    font-weight: 600;
+    color: rgb(134, 99, 205);
+    text-shadow: 2px 1px rgb(108, 42, 240);
+    font-size: 50px;
+    margin-bottom: 30px;
+    margin-top: 20px;
+   
+}
+.btn{
+    border-radius: 10px;
+    width: 120px;
+    height: 80px;
+    font-size: 20px;
+    border: none;
+    color: rgb(234, 224, 224);
+    margin-left: 10px;
+}
+.Added-Item{
+    margin-top: 20px;
+    font-size: 30px;
+    font-weight: 900;
+    color: rgb(28, 28, 111);
+    cursor: pointer;
+}
+
+h3{
+    margin-top: 20px;
+    color: rgba(84, 84, 70, 0.677);
+}
+.me{
+    color: rgba(102, 100, 100, 0.853);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}

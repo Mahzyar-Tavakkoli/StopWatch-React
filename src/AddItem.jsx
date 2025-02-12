@@ -12,8 +12,12 @@ function AddItem(props) {
   return (
     <div>
       {ItemObject.ItemArray.map((i, index) => (
-        <p onClick={() => HandleDeleteByClick(index)} key={index}>
-          {index+1 + " " + i}
+        <p
+          className="Added-Item"
+          onClick={() => HandleDeleteByClick(index)}
+          key={index}
+        >
+          {i}
         </p>
       ))}
     </div>

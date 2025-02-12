@@ -11,10 +11,12 @@ function Timer(props) {
   const [newinterval, changeInterval] = useState(null);
   const [ItemArray, setItemArray] = useState([]);
 
-  const HandleSaveItems = ()=>{
-    const now = document.querySelector(".Timer").innerHTML
-    setItemArray((prev)=> [...prev , now])
-  }
+  const HandleSaveItems = () => {
+    const now = document.querySelector(".Timer").innerHTML;
+    if (!ItemArray.includes(now)) {
+      setItemArray((prev) => [...prev, now]);
+    }
+  };
 
   const HandleStopStart = () => {
     if (!IsStart) {
@@ -55,16 +57,38 @@ function Timer(props) {
 
   return (
     <>
-      <ItemContext.Provider value={{
-        ItemArray,
-        setItemArray
-      }}>
+      <ItemContext.Provider
+        value={{
+          ItemArray,
+          setItemArray,
+        }}
+      >
         <p className="Timer">{`${Hour < 10 ? "0" + Hour : Hour} : ${
           Minute < 10 ? "0" + Minute : Minute
         } : ${Second < 10 ? "0" + Second : Second}`}</p>
-        <button onClick={HandleStopStart}>{IsStart ? "stop" : "start"}</button>
-        <button onClick={HandleReset}>reset</button>
-        <button onClick={HandleSaveItems}>save time</button>
+        <button
+          className="btn"
+          style={{
+            background: IsStart ? "rgb(255, 98, 0)" : "rgb(49, 209, 94)",
+          }}
+          onClick={HandleStopStart}
+        >
+          {IsStart ? "stop" : "start"}
+        </button>
+        <button
+          className="btn"
+          style={{ background: "rgb(240, 21, 21)" }}
+          onClick={HandleReset}
+        >
+          reset
+        </button>
+        <button
+          className="btn"
+          style={{ background: "rgb(90, 21, 240)" }}
+          onClick={HandleSaveItems}
+        >
+          save
+        </button>
         <AddItem />
       </ItemContext.Provider>
     </>

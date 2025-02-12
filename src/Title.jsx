@@ -1,13 +1,12 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
+import React from "react";
+import ReactDOM from "react-dom/client";
 
-
-function Title(){
-    return (
-        <>
-            <h1>Timer</h1>
-        </>
-    )
+function Title() {
+  return (
+    <>
+      <h1>Timer</h1>
+    </>
+  );
 }
 
-export default Title
+export default Title;
