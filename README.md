@@ -8,9 +8,12 @@
 - React Js
 ---
 
-## Live preview
-> click [here]() to see preview
----
+## Run
+for run this app :
+- download Nodejs
+- open terminal in project folder
+- npm i
+- npm start
 
 ### Author
 ---
